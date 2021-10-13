@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(void) {
+  int a,b,flag;
+  printf("enter the two numbers to know the prime numbers between them \n");
+  scanf("%d %d",&a,&b);
+  while(a<b)
+  {
+    flag=0;
+if(a<=1)
+{
+  ++a;
+  continue;
+}
+for(int i=2;i<=a/2;++i)
+{
+  if(a%i==0)
+  {
+    flag=1;
+    break;
+  }
+
+}
+
+if(flag==0)
+{
+  printf("%d\t",a);
+}
+
+a++;
+
+  }
+  return 0;
+}
